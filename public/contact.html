@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="contact.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=League+Spartan:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- reCAPTCHA with onload callback -->
+  <script src="https://www.google.com/recaptcha/api.js?onload=grecaptchaCallback&render=explicit" async defer></script>
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="navbar-left">
+      <div class="dot"></div>
+      <div class="title"><h1>Fiona Latisha</h1></div>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav class="navbar-right" id="navbar-right">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="resume.html">Resume</a>
+      <a href="skills.html">Skills</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <main class="contact-container">
+    <h1 class="section-title">Let's Connect</h1>
+    <p class="subtitle">I'd love to hear from you! Whether it's a project, opportunity, or just to say hi 😊</p>
+
+    <div class="contact-content">
+      <form class="contact-form" id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="title" placeholder="Subject" required />
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+
+        <!-- CAPTCHA -->
+        <div id="recaptcha-container" class="g-recaptcha"></div>
+
+        <div id="formMessage" style="margin-top: 10px;"></div>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <h3>Contact Info</h3>
+        <p><strong>Email:</strong> flatishaa1@gmail.com</p>
+        <p><strong>Location:</strong> Cikarang, Indonesia</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Load config.js after DOM and EmailJS -->
+  <script src="config.js"></script>
+  <script>
+    emailjs.init(emailConfig.PUBLIC_KEY);
+
+    function toggleMenu() {
+      document.getElementById('navbar-right').classList.toggle('show');
+    }
+
+    // Called by Google reCAPTCHA when it's loaded
+    function grecaptchaCallback() {
+      if (emailConfig.RECAPTCHA_SITE_KEY) {
+        grecaptcha.render("recaptcha-container", {
+          sitekey: emailConfig.RECAPTCHA_SITE_KEY
+        });
+      }
+    }
+
+    window.onload = () => {
+      const form = document.getElementById('contact-form');
+      const messageDiv = document.getElementById('formMessage');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const recaptchaToken = grecaptcha.getResponse();
+        if (!recaptchaToken) {
+          messageDiv.textContent = "Please verify reCAPTCHA!";
+          messageDiv.style.color = "red";
+          return;
+        }
+
+        emailjs.sendForm(emailConfig.SERVICE_ID, emailConfig.TEMPLATE_ID, form)
+          .then(() => {
+            messageDiv.textContent = "Message sent successfully!";
+            messageDiv.style.color = "green";
+            form.reset();
+            grecaptcha.reset();
+          })
+          .catch(() => {
+            messageDiv.textContent = "Failed to send message. Try again.";
+            messageDiv.style.color = "red";
+          });
+      });
+    };
+  </script>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Fiona Latisha. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
