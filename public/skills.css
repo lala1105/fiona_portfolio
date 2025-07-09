@@ -1,4 +1,4 @@
-/* Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@ body {
   color: #4b2e2e;
 }
 
-/* Header/Navbar */
+
 header {
   display: flex;
   justify-content: space-between;
@@ -24,7 +24,7 @@ header {
   flex-wrap: wrap;
 }
 
-/* Left side: dot + title */
+
 .navbar-left {
   display: flex;
   align-items: center;
@@ -48,7 +48,7 @@ header {
   color: #8c6e6e;
 }
 
-/* Right side: nav links */
+
 .navbar-right {
   display: flex;
   gap: 30px;
@@ -83,7 +83,7 @@ header {
   width: 100%;
 }
 
-/* Hamburger Menu Button */
+
 .menu-toggle {
   display: none;
   font-size: 26px;
@@ -93,7 +93,7 @@ header {
   cursor: pointer;
 }
 
-/* Skills Section */
+
 .skills-page {
   max-width: 1100px;
   margin: auto;
@@ -150,7 +150,7 @@ header {
   color: #4b2e2e;
   font-weight: 200;
 }
-/* Animation */
+
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -162,7 +162,7 @@ header {
   }
 }
 
-/* Animation delays */
+
 .skill-card:nth-child(1) { animation-delay: 0.1s; }
 .skill-card:nth-child(2) { animation-delay: 0.2s; }
 .skill-card:nth-child(3) { animation-delay: 0.3s; }
@@ -174,7 +174,7 @@ header {
 .skill-card:nth-child(9) { animation-delay: 0.9s; }
 .skill-card:nth-child(10) { animation-delay: 1.0s; }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;

@@ -1,4 +1,4 @@
-/* Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +29,7 @@ header {
 }
 
 
-/* Left side: dot + title */
+
 .navbar-left {
   display: flex;
   align-items: center;
@@ -55,7 +55,7 @@ header {
   color: #8c6e6e;
 }
 
-/* Right side: nav links */
+
 .navbar-right {
   display: flex;
   gap: 30px;
@@ -75,7 +75,7 @@ header {
   color: #cd7a98;
 }
 
-/* Optional: underline effect on hover */
+
 .navbar-right a::after {
   content: '';
   display: block;
@@ -92,9 +92,6 @@ header {
   width: 100%;
 }
 
-
-
-/* Resume Layout */
 .resume-container {
   display: flex;
   justify-content: space-between;
@@ -105,13 +102,11 @@ header {
   flex-wrap: wrap;
 }
 
-/* Column Shared Styles */
 .column {
   flex: 1;
   min-width: 300px;
 }
 
-/* Section Title */
 .section-title {
   font-size: 40px;
   color: #e84e7c;
@@ -129,7 +124,7 @@ header {
   margin-top: 8px;
 }
 
-/* Timeline Styles */
+
 .timeline {
   border-left: 3px solid #4b2e2e;
   padding-left: 25px;
@@ -140,13 +135,13 @@ header {
   position: relative;
   margin-bottom: 40px;
 
-  /* Animation */
+ 
   opacity: 0;
   animation: fadeIn 0.8s ease forwards;
   transform: translateY(20px);
 }
 
-/* Staggered delays */
+
 .timeline-item:nth-child(1) {
   animation-delay: 0.2s;
 }
@@ -156,9 +151,9 @@ header {
 .timeline-item:nth-child(3) {
   animation-delay: 0.6s;
 }
-/* Add more as needed */
 
-/* Dot */
+
+
 .timeline-item .dot {
   position: absolute;
   left: -13px;
@@ -170,7 +165,7 @@ header {
   border: 3px solid #fffbea;
 }
 
-/* Content Styling */
+
 .timeline-item .content h3 {
   font-size: 18px;
   color: #cc4e74;
@@ -194,7 +189,7 @@ header {
   margin-bottom: 5px;
 }
 
-/* Animation Keyframes */
+
 @keyframes fadeIn {
   from {
     opacity: 0;

@@ -1,4 +1,4 @@
-/* Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +22,7 @@ header {
   z-index: 1000;
 }
 
-/* Left side: dot + title */
+
 .navbar-left {
   display: flex;
   align-items: center;
@@ -48,7 +48,7 @@ header {
   color: #8c6e6e;
 }
 
-/* Right side: nav links */
+
 .navbar-right {
   display: flex;
   gap: 30px;
@@ -83,7 +83,6 @@ header {
   width: 100%;
 }
 
-/* Portfolio Section */
 .portfolio-page {
   max-width: 1200px;
   margin: auto;
@@ -99,11 +98,11 @@ header {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Max 3 per row */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 30px;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 1024px) {
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -154,7 +153,7 @@ header {
   font-weight: 200;
 }
 
-/* View Button */
+
 .view-btn {
   background-color: #747c65;
   color: #fffbea;
@@ -171,7 +170,7 @@ header {
   background-color: #e84e7c;
 }
 
-/* Modal Styles */
+
 .modal {
   display: none;
   position: fixed;
@@ -205,7 +204,7 @@ header {
   cursor: pointer;
 }
 
-/* Animation Keyframes */
+
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -217,7 +216,7 @@ header {
   }
 }
 
-/* Tech Badges */
+
 .tech-badges {
   margin-bottom: 10px;
 }
@@ -252,7 +251,7 @@ header {
   color: #cc4e74;
   cursor: pointer;
 }
-/* === Responsive Design === */
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;

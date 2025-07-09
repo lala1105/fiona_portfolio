@@ -82,7 +82,18 @@
 </div>
 
 <div class="portfolio-item">
-  <img src="images/home.png" alt="Project 5">
+  <img src="images/profiling.png" alt="Project 5">
+  <h3>Profiling 5 Threat Actor</h3>
+  <div class="tech-badges">
+    <span class="badge">OSINT tools</span>
+  </div>
+  <p>Conducted in-depth profiling of five cyber threat actors using OSINT tools like Maltego and Whois. 
+  Collected TTPs, mapped infrastructure, and compiled intelligence reports.</p>
+  <button class="view-btn" onclick="openModal('images/profiling.png')">View Project</button>
+</div>
+
+<div class="portfolio-item">
+  <img src="images/home.png" alt="Project 6">
   <h3>This Website</h3>
   <div class="tech-badges">
     <span class="badge">HTML</span>
@@ -96,13 +107,13 @@
 
     </div>
 
-    <!-- Modal moved OUTSIDE of .portfolio-grid -->
+   
     <div id="imageModal" class="modal" onclick="closeModal()">
       <span class="close-btn">&times;</span>
       <img class="modal-content" id="modalImage">
     </div>
 
-    <!-- Modal Script -->
+    
     <script>
       function toggleMenu() {
       document.getElementById('navbar-right').classList.toggle('show');
@@ -117,7 +128,7 @@
       }
     </script>
 
-    <!-- Scroll Animation Script -->
+    
     <script>
       const items = document.querySelectorAll(".portfolio-item");
 

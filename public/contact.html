@@ -6,10 +6,7 @@
   <title>Contact Me</title>
   <link rel="stylesheet" href="contact.css"/>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=League+Spartan:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- reCAPTCHA with onload callback -->
   <script src="https://www.google.com/recaptcha/api.js?onload=grecaptchaCallback&render=explicit" async defer></script>
-  <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 <body>
@@ -41,7 +38,6 @@
         <input type="text" name="title" placeholder="Subject" required />
         <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
 
-        <!-- CAPTCHA -->
         <div id="recaptcha-container" class="g-recaptcha"></div>
 
         <div id="formMessage" style="margin-top: 10px;"></div>
@@ -56,7 +52,7 @@
     </div>
   </main>
 
-  <!-- Load config.js after DOM and EmailJS -->
+
   <script src="config.js"></script>
   <script>
     emailjs.init(emailConfig.PUBLIC_KEY);
@@ -65,7 +61,6 @@
       document.getElementById('navbar-right').classList.toggle('show');
     }
 
-    // Called by Google reCAPTCHA when it's loaded
     function grecaptchaCallback() {
       if (emailConfig.RECAPTCHA_SITE_KEY) {
         grecaptcha.render("recaptcha-container", {

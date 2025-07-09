@@ -1,4 +1,4 @@
-/* Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +29,7 @@ header {
 }
 
 
-/* Left side: dot + title */
+
 .navbar-left {
   display: flex;
   align-items: center;
@@ -55,7 +55,7 @@ header {
   color: #8c6e6e;
 }
 
-/* Right side: nav links */
+
 .navbar-right {
   display: flex;
   gap: 30px;
@@ -74,7 +74,7 @@ header {
   color: #cd7a98;
 }
 
-/* Optional: underline effect on hover */
+
 .navbar-right a::after {
   content: '';
   display: block;
@@ -91,7 +91,6 @@ header {
   width: 100%;
 }
 
-/* Contact Section */
 .contact-container {
   max-width: 1100px;
   margin: auto;
@@ -130,7 +129,6 @@ header {
   animation-delay: 2.6s;
 }
 
-/* Form & Info */
 .contact-form {
   flex: 1;
   min-width: 300px;
@@ -192,7 +190,7 @@ header {
   color: #cc4e74;
   cursor: pointer;
 }
-/* === Responsive Design === */
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -223,7 +221,6 @@ header {
   }
 }
 
-/* Animations */
 @keyframes typing {
   to {
     width: 12ch;

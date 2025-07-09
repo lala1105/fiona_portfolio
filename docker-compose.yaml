@@ -1,0 +1,9 @@
+services:
+  portfolio:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./public:/usr/share/nginx/html
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    restart: unless-stopped

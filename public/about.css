@@ -29,7 +29,6 @@ header {
 }
 
 
-/* Left side: dot + title */
 .navbar-left {
   display: flex;
   align-items: center;
@@ -55,7 +54,6 @@ header {
   color: #8c6e6e;
 }
 
-/* Right side: nav links */
 .navbar-right {
   display: flex;
   gap: 30px;
@@ -74,7 +72,6 @@ header {
   color: #cd7a98;
 }
 
-/* Optional: underline effect on hover */
 .navbar-right a::after {
   content: '';
   display: block;
@@ -107,7 +104,7 @@ header {
   margin-bottom: 50px;
 }
 
-/* === Photo Slide-In Animation === */
+
 .photo {
   opacity: 0;
   transform: translateX(-50px);
@@ -140,7 +137,7 @@ header {
   text-align: justify;
 }
 
-/* === Interests Section Fade In === */
+
 .interests {
   margin-top: 30px;
   opacity: 0;
@@ -194,7 +191,6 @@ header {
   cursor: pointer;
 }
 
-/* === Tag Hover Effect === */
 .tags span:hover {
   transform: translateY(-5px);
   background-color: #a0ab89;
@@ -218,7 +214,7 @@ header {
   color: #cc4e74;
   cursor: pointer;
 }
-/* === Responsive Design === */
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -271,7 +267,7 @@ header {
 
   .tags span {
   width: 100%;
-  max-width: 300px;     /* Optional: limit to keep center-aligned */
+  max-width: 300px;     
   padding: 12px 24px;
   font-size: 16px;
   border-radius: 12px;
@@ -290,7 +286,7 @@ header {
 }
 }
 
-/* === Bio Slide-In from Right === */
+
 .bio {
   opacity: 0;
   transform: translateX(50px);
